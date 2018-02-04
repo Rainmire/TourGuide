@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="use-all-space">
+<html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta charset="UTF-8">
     <title>TomTom JavaScript SDK - Switching Tiles</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="sdk/map.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="elements.css"> -->
+    <link rel="stylesheet" type="text/css" href="sdk/elements.css">
     <script src="sdk/tomtom.min.js"></script>
     <style>
         label {
@@ -24,11 +24,11 @@
     <div id="map" class="use-all-space"></div>
     <script>
         // Define your product name and version
-        tomtom.setProductInfo("TourGuide", "4.19.5");
+        tomtom.setProductInfo("MapsWebSDKExamples", "4.15.1");
         var map = tomtom.map("map", {
             key: "Ja9sedGJlJJHgfWROHBWF4Qev7QYVeeV",
             source: "vector",
-            basePath: "./sdk"
+            basePath: "./sdk/styles/basic_main.json"
         });
 
         var languageLabel = L.DomUtil.create("label");
