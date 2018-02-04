@@ -1,14 +1,24 @@
-var path = require(“path”);
+var path = require('path');
 
 module.exports = {
- context: __dirname,
- entry: “./tour_guide.jsx”,
- output: {
-   path: path.resolve(__dirname),
-   filename: “bundle.js”
- },
- devtool: ‘source-map’,
- resolve: {
-   extensions: [“.js”, “.jsx”, “*”]
- }
+  entry: './tour_guide.jsx',
+  output: {
+    filename: './bundle.js',
+  },
+  module: {
+    loaders: [
+      {
+        test: [/\.jsx?$/],
+        exclude: /(node_modules)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env', 'react']
+        }
+      }
+    ]
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '*']
+  }
 };
